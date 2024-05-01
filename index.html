@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de CV</title>
+
+  <link rel="shortcut icon" href="/cv.svg" type="image/svg+xml">
+
+  <!-- Enlace para la fuente Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Enlace para la fuente Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tu hoja de estilos CSS -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- Para PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+
+</head>
+
+<body>
+  <h1 class="page-title" id="title">Generador de CV Formato ATS <img src="/assets/images/cv.ico" alt="Icono"></h1>
+  <div class="container">
+    <form id="cv-form">
+      <!-- Sección de Información Personal -->
+      <div class="form-section">
+        <h2>Información Personal</h2>
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" required>
+        </div>
+        <div class="form-group">
+          <label for="linkedin">Perfil de LinkedIn:</label>
+          <input type="text" id="linkedin" name="linkedin">
+        </div>
+      </div>
+
+      <!-- Sección de Experiencia Laboral -->
+      <div class="form-section" id="experiencia-section">
+        <h2>Experiencia Laboral</h2>
+        <div class="experiencia-item">
+          <div class="form-group">
+            <label for="cargo1">Cargo:</label>
+            <input type="text" id="cargo1" name="cargo1" required>
+          </div>
+          <div class="form-group">
+            <label for="empresa1">Empresa:</label>
+            <input type="text" id="empresa1" name="empresa1" required>
+          </div>
+          <div class="form-group">
+            <label for="fecha1">Fechas:</label>
+            <input type="text" id="fecha1" name="fecha1" placeholder="Enero de 20xx - Actualmente" required>
+          </div>
+          <div class="form-group">
+            <label for="responsabilidades1">Responsabilidades:</label>
+            <textarea id="responsabilidades1" name="responsabilidades1" rows="4" required></textarea>
+          </div>
+        </div>
+        <button type="button" onclick="agregarExperiencia()">Agregar Experiencia</button>
+      </div>
+
+      <!-- Sección de Educación -->
+      <div class="form-section" id="educacion-section">
+        <h2>Educación</h2>
+        <div class="educacion-item">
+          <div class="form-group">
+            <label for="titulo1">Título:</label>
+            <input type="text" id="titulo1" name="titulo1" required>
+          </div>
+          <div class="form-group">
+            <label for="institucion1">Institución:</label>
+            <input type="text" id="institucion1" name="institucion1" required>
+          </div>
+          <div class="form-group">
+            <label for="fechaEducacion1">Fechas:</label>
+            <input type="text" id="fechaEducacion1" name="fechaEducacion1"
+              placeholder="Septiembre de 20xx - Mayo de 20xx" required>
+          </div>
+        </div>
+        <button type="button" onclick="agregarEducacion()">Agregar Educación</button>
+      </div>
+
+      <!-- Sección de Aptitudes -->
+      <div class="form-section" id="aptitudes-section">
+        <h2>Aptitudes</h2>
+        <div class="form-group">
+          <label for="aptitudes">Aptitudes (separadas por comas):</label>
+          <input type="text" id="aptitudes" name="aptitudes" required>
+        </div>
+        <button type="button" onclick="agregarAptitud()">Agregar Aptitud</button>
+      </div>
+
+      <button type="button" onclick="generarYDescargarPDF()">Generar CV en PDF</button>
+      
+
+
+    </form>
+  </div>
+
+  <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/jspdf.min.js"></script>
+
+
+</body>
+
+</html>

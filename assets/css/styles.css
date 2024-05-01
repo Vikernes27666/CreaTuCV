@@ -1,0 +1,101 @@
+body {
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.page-title {
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  font-size: 36px;
+  color: #333;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  max-width: 800px; 
+  margin: 20px auto 0;
+}
+
+.dot-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px; 
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  /*border-radius: 10px;*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: calc(100% - 10px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Space Mono", monospace;
+}
+
+button:hover {
+  background-color: #bbb;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: none;
+  }
+
+  .page-title {
+    font-size: 24px;
+    padding: 30px;
+  }
+}
