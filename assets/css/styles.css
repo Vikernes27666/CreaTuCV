@@ -86,6 +86,22 @@ button:hover {
   background-color: #bbb;
 }
 
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f2f2f2;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
 /* Estilos responsivos */
 @media screen and (max-width: 600px) {
   .container {
